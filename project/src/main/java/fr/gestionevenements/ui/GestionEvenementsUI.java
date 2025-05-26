@@ -5,7 +5,6 @@ import fr.gestionevenements.modele.*;
 import fr.gestionevenements.serialisation.JSONSerializationStrategy;
 import fr.gestionevenements.serialisation.SerializationStrategy;
 import fr.gestionevenements.service.NotificationService;
-import fr.gestionevenements.service.NotificationServiceFactory;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,8 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import javafx.util.Callback;
-import java.nio.file.Paths;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -32,10 +29,6 @@ public class GestionEvenementsUI extends Application {
 
     // Gestionnaire d'événements (Singleton)
     private final GestionEvenements gestionEvenements = GestionEvenements.getInstance();
-    
-    // Services de notification
-    private final NotificationService emailService = 
-            NotificationServiceFactory.creerNotificationService("email", "admin@evenements.fr");
     
     // Composants de l'interface
     private TabPane tabPane;
