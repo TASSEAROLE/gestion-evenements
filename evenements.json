@@ -1,0 +1,24 @@
+{
+  "@class" : "java.util.HashMap",
+  "43e8678b-193e-44e6-8f31-b86976b5e4be" : {
+    "@class" : "fr.gestionevenements.modele.Concert",
+    "id" : "43e8678b-193e-44e6-8f31-b86976b5e4be",
+    "nom" : "party",
+    "capaciteMax" : 50,
+    "date" : [ 2025, 5, 16, 12, 30 ],
+    "lieu" : "yaounde",
+    "participants" : [ "java.util.ArrayList", [ {
+      "@class" : "fr.gestionevenements.modele.Participant",
+      "id" : "2a0c7605-646e-4e09-9eb3-b58682389eb6",
+      "nom" : "arole",
+      "email" : "arole@gmail.com"
+    }, {
+      "@class" : "fr.gestionevenements.modele.Participant",
+      "id" : "1267ca30-ef23-4daf-884b-3552f74b13f7",
+      "nom" : "louis",
+      "email" : "louis@gmail.com"
+    } ] ],
+    "artiste" : "damso",
+    "genreMusical" : "rap"
+  }
+}
