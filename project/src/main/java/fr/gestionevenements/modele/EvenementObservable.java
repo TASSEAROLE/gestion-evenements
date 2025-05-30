@@ -3,6 +3,7 @@ package fr.gestionevenements.modele;
 
 public interface EvenementObservable {
 
+
     void ajouterObservateur(ParticipantObserver observer);
     
 

@@ -1,25 +1,19 @@
 package fr.gestionevenements.modele;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Classe représentant une conférence, qui est un type spécifique d'événement.
- * Hérite de la classe abstraite Evenement.
- */
 public class Conference extends Evenement {
+    @JsonProperty("theme")
     private String theme;
-    private List<String> intervenants;
-    
-    /**
-     * Constructeur d'une conférence
-     * @param nom Nom de la conférence
-     * @param date Date et heure de la conférence
-     * @param lieu Lieu de la conférence
-     * @param capaciteMax Capacité maximale de participants
-     * @param theme Thème de la conférence
-     */
+    @JsonProperty("intervenants")
+        private List<String> intervenants;
+
     public Conference(String nom, LocalDateTime date, String lieu, int capaciteMax, String theme) {
         super(nom, date, lieu, capaciteMax);
         this.theme = theme;
@@ -27,22 +21,16 @@ public class Conference extends Evenement {
     }
     public Conference() {
         super();
+        this.intervenants = new ArrayList<>();
 
     }
-    
-    /**
-     * Ajoute un intervenant à la conférence
-     * @param intervenant Nom de l'intervenant à ajouter
-     */
+
     public void ajouterIntervenant(String intervenant) {
         intervenants.add(intervenant);
-        notifierObservateurs("Un nouvel intervenant a été ajouté à la conférence " + this.nom + ": " + intervenant);
+        notifierObservateurs("Un nouvel intervenant a été ajouté à la conférence " +  ": " + intervenant);
     }
     
-    /**
-     * Affiche les détails de la conférence, y compris les intervenants
-     * @return Une chaîne de caractères contenant les détails de la conférence
-     */
+
     @Override
     public String afficherDetails() {
         StringBuilder details = new StringBuilder(super.afficherDetails());

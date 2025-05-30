@@ -13,10 +13,7 @@ import javafx.scene.control.TableView;
 
 import java.time.format.DateTimeFormatter;
 
-/**
- * Fabrique pour créer des tableaux avec des configurations spécifiques.
- * Implémente le pattern Factory pour la création de tableaux.
- */
+
 public class TableFactory {
     
     //Crée un tableau pour afficher les événements.

@@ -6,10 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.Region;
 
-/**
- * Classe utilitaire pour la gestion des styles CSS de l'interface utilisateur.
- * Centralise les styles pour maintenir une apparence cohérente.
- */
 public class StylesManager {
     
     // Constantes de couleurs
@@ -50,8 +46,7 @@ public class StylesManager {
             )
         );
     }
-    
-    //Applique le style secondaire à un bouton.
+
     public static void appliquerStyleBoutonSecondaire(Button bouton) {
         bouton.setStyle(
             "-fx-background-color: " + COULEUR_SECONDAIRE + ";" +
@@ -81,8 +76,6 @@ public class StylesManager {
             )
         );
     }
-    
-    //Applique le style d'alerte à un bouton.
     public static void appliquerStyleBoutonAlerte(Button bouton) {
         bouton.setStyle(
             "-fx-background-color: " + COULEUR_ALERTE + ";" +
@@ -112,11 +105,7 @@ public class StylesManager {
             )
         );
     }
-    
-    /**
-     * Applique le style de titre à un label.
-     * @param label Le label à styliser
-     */
+
     public static void appliquerStyleTitre(Label label) {
         label.setStyle(
             "-fx-font-size: 18px;" +
@@ -138,7 +127,7 @@ public class StylesManager {
     public static <T> void appliquerStyleTableau(TableView<T> tableau) {
         tableau.setStyle(
             "-fx-background-color: white;" +
-            "-fx-border-color: " + COULEUR_PRIMAIRE + ";" +
+            "-fx-border-color: " + COULEUR_SECONDAIRE+ ";" +
             "-fx-border-width: 1px;" +
             "-fx-border-radius: 4px;" +
             "-fx-padding: 0;"
